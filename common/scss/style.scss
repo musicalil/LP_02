@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+//----------------------------Reset CSS----------------------//
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+//----------------------------Reset CSS----------------------//
+
+//ブレイクポイント
+$breakpoints: (
+    sp: "only screen and (max-width: 767px)"
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)}{
+        @content;
+    }
+}
+
+//全要素適用
+*{
+    box-sizing: border-box;
+}
+
+//フォント
+html{
+    font-family: "メイリオ", "Meiryo", "sans-serif";
+}
+
+//リンク装飾リセット
+a{
+    text-decoration: none;
+}
+
+//置き換えinlineリセット
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+header{//kv
+    text-align: center;
+    background: url(/common/images/kv_bg.jpg) no-repeat;
+    background-size: cover;
+    width: 710px;
+    margin: 7px auto 0;
+    
+    @include media(sp){
+        width: 100%;
+        margin: 0;
+    }
+}//header
+
+main{
+    width: 710px;
+    background: #edeae5;
+    padding: 16px 0 33px;
+    margin: 0 auto 17px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    position: relative;//pagetopの基準
+    
+    @include media(sp){
+        width: 100%;
+        margin-bottom: 57.2px;
+    }
+    section{
+        width: 338px;
+        background: #fff;   
+        margin: 0 10px 22px 10px;
+        border: 1px solid #d9d9d9;
+        position: relative;
+        &:nth-child(even){
+            margin-left: 0;
+            
+            @include media(sp){
+                margin-left: auto;
+            }
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        
+        @include media(sp){
+            width: 93.43%;
+            margin: 0 auto;
+        }
+    .inner{
+        color: #fff;
+        background-color: #604418;
+        background-image: url(/common/images/triangle.jpg);
+        background-repeat: repeat-x;
+        background-position: bottom 0 left 0;
+        background-size: 20px;
+        padding: 14px 9px;
+        h2{
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.38;
+            &:hover{
+                text-decoration: underline #d6d1cb;   
+            }
+            a{
+                color: #fff;
+                text-decoration: underline;
+                letter-spacing: -.09em;
+            }
+            
+            @include media(sp){
+                font-size: 16px;
+            }
+        }//h2
+        .course{//コース番号
+            width: 117px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            background: #f28100;
+            margin: 5px 0 0 auto;
+            dt{
+                background: #f28100;
+                padding: 2px 3px 2px 5px;
+            }//dt
+            dd{
+                color: #333;
+                background: #fff;
+                padding: 2px 6px 2px 5px;
+                border: 1px solid #f28100; 
+            }//dd
+        }//.course
+    }//.inner
+    .img{
+        margin: 10px 9px 0;
+        
+        @include media(sp){
+             width: 94.48%;
+            }
+        }
+    .imgpic{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        @include media(sp){
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .photo{
+            width: 320px;
+            @include media(sp){
+                 width: 100%;
+            }
+        }
+        .photo2{
+            width: 155px;
+            
+            @include media(sp){
+                 width: 48.58%;
+            }
+        }
+    }//.imgpic
+    .lede{
+        margin-top: 6px;
+        text-align: center;
+        img{
+            width: 320px;
+            
+            @include media(sp){
+                width: 94.16%;
+            }
+        }
+    }//.lede
+    .lede-p{
+            width: 320px;
+            background: #f2eada;
+            margin: 0 auto;
+        
+        @include media(sp){
+            width: 94.16%;
+        }
+            li{
+                font-size: 16px;
+                line-height: 1.125;
+                padding: 9px 11px 13px 30px; 
+                background: url(/common/images/icon.jpg) no-repeat 10px 9px / 13px 15px;
+                & + li{
+                    margin-top: 8px;
+                }
+                
+                @include media(sp){
+                    font-size: 14px;
+                    padding: 4px 0 4px 27px;
+                    background-size: 12px 13.5px;
+                    background-position: 5px 6px;
+                    letter-spacing: -.01em;
+                    & + li{
+                        margin-top: 4px;
+                    }
+                }
+            }//li
+        }//.lede-p
+    .btn{
+        width: 250px;
+        height: 40px;
+        font-size: 18px;
+        background: url(/common/images/btn.jpg) no-repeat 0 0 / 250px 40px;
+        margin: 12px 44px 14px;
+        
+        @include media(sp){
+            width: 220px;
+            height: 35.5px;
+            font-size: 16px;
+            background-size: 220px 35.5px;
+        }
+            a{
+                display: block;
+                text-align: center;
+                line-height: 40px;
+                padding-right: 14px;
+                color: #fff;
+                &:hover{
+                opacity: 0.7;
+                }
+                
+                @include media(sp){
+                        line-height: 35.5px;
+                    }
+            }
+        }
+    }//section
+    .pagetop{
+        color: #009;
+        font-size: 7.97px;
+        line-height: 1.11;
+        padding: 17px 0 13px 0;
+        position: absolute;
+        bottom: -29px;
+        right: 20px;
+        &:hover{
+            text-decoration: underline;
+        }
+        img{
+            width: 10px;
+        }
+        
+        @include media(sp){
+            bottom: -54px;
+            right: 10px;
+            text-decoration: underline;
+            
+            img{
+                width: 7px;
+            }
+        }
+    }
+}//main

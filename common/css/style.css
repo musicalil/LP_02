@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "メイリオ", "Meiryo", "sans-serif";
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+header {
+  text-align: center;
+  background: url(/common/images/kv_bg.jpg) no-repeat;
+  background-size: cover;
+  width: 710px;
+  margin: 7px auto 0;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+main {
+  width: 710px;
+  background: #edeae5;
+  padding: 16px 0 33px;
+  margin: 0 auto 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  main {
+    width: 100%;
+    margin-bottom: 57.2px;
+  }
+}
+
+main section {
+  width: 338px;
+  background: #fff;
+  margin: 0 10px 22px 10px;
+  border: 1px solid #d9d9d9;
+  position: relative;
+}
+
+main section:nth-child(even) {
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  main section:nth-child(even) {
+    margin-left: auto;
+  }
+}
+
+main section:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  main section {
+    width: 93.43%;
+    margin: 0 auto;
+  }
+}
+
+main section .inner {
+  color: #fff;
+  background-color: #604418;
+  background-image: url(/common/images/triangle.jpg);
+  background-repeat: repeat-x;
+  background-position: bottom 0 left 0;
+  background-size: 20px;
+  padding: 14px 9px;
+}
+
+main section .inner h2 {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.38;
+}
+
+main section .inner h2:hover {
+  -webkit-text-decoration: underline #d6d1cb;
+  text-decoration: underline #d6d1cb;
+}
+
+main section .inner h2 a {
+  color: #fff;
+  text-decoration: underline;
+  letter-spacing: -.09em;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .inner h2 {
+    font-size: 16px;
+  }
+}
+
+main section .inner .course {
+  width: 117px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 10px;
+  background: #f28100;
+  margin: 5px 0 0 auto;
+}
+
+main section .inner .course dt {
+  background: #f28100;
+  padding: 2px 3px 2px 5px;
+}
+
+main section .inner .course dd {
+  color: #333;
+  background: #fff;
+  padding: 2px 6px 2px 5px;
+  border: 1px solid #f28100;
+}
+
+main section .img {
+  margin: 10px 9px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .img {
+    width: 94.48%;
+  }
+}
+
+main section .imgpic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .imgpic {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
+main section .imgpic .photo {
+  width: 320px;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .imgpic .photo {
+    width: 100%;
+  }
+}
+
+main section .imgpic .photo2 {
+  width: 155px;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .imgpic .photo2 {
+    width: 48.58%;
+  }
+}
+
+main section .lede {
+  margin-top: 6px;
+  text-align: center;
+}
+
+main section .lede img {
+  width: 320px;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .lede img {
+    width: 94.16%;
+  }
+}
+
+main section .lede-p {
+  width: 320px;
+  background: #f2eada;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .lede-p {
+    width: 94.16%;
+  }
+}
+
+main section .lede-p li {
+  font-size: 16px;
+  line-height: 1.125;
+  padding: 9px 11px 13px 30px;
+  background: url(/common/images/icon.jpg) no-repeat 10px 9px/13px 15px;
+}
+
+main section .lede-p li + li {
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .lede-p li {
+    font-size: 14px;
+    padding: 4px 0 4px 27px;
+    background-size: 12px 13.5px;
+    background-position: 5px 6px;
+    letter-spacing: -.01em;
+  }
+  main section .lede-p li + li {
+    margin-top: 4px;
+  }
+}
+
+main section .btn {
+  width: 250px;
+  height: 40px;
+  font-size: 18px;
+  background: url(/common/images/btn.jpg) no-repeat 0 0/250px 40px;
+  margin: 12px 44px 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .btn {
+    width: 220px;
+    height: 35.5px;
+    font-size: 16px;
+    background-size: 220px 35.5px;
+  }
+}
+
+main section .btn a {
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  padding-right: 14px;
+  color: #fff;
+}
+
+main section .btn a:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 767px) {
+  main section .btn a {
+    line-height: 35.5px;
+  }
+}
+
+main .pagetop {
+  color: #009;
+  font-size: 7.97px;
+  line-height: 1.11;
+  padding: 17px 0 13px 0;
+  position: absolute;
+  bottom: -29px;
+  right: 20px;
+}
+
+main .pagetop:hover {
+  text-decoration: underline;
+}
+
+main .pagetop img {
+  width: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  main .pagetop {
+    bottom: -54px;
+    right: 10px;
+    text-decoration: underline;
+  }
+  main .pagetop img {
+    width: 7px;
+  }
+}
