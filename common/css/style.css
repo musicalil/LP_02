@@ -74,7 +74,7 @@ img {
 
 header {
   text-align: center;
-  background: url(/common/images/kv_bg.jpg) no-repeat;
+  background: url(../images/kv_bg.jpg) no-repeat;
   background-size: cover;
   width: 710px;
   margin: 7px auto 0;
@@ -142,7 +142,7 @@ main section:last-child {
 main section .inner {
   color: #fff;
   background-color: #604418;
-  background-image: url(/common/images/triangle.jpg);
+  background-image: url(../images/triangle.jpg);
   background-repeat: repeat-x;
   background-position: bottom 0 left 0;
   background-size: 20px;
@@ -284,7 +284,7 @@ main section .lede-p li {
   font-size: 16px;
   line-height: 1.125;
   padding: 9px 11px 13px 30px;
-  background: url(/common/images/icon.jpg) no-repeat 10px 9px/13px 15px;
+  background: url(../images/icon.jpg) no-repeat 10px 9px/13px 15px;
 }
 
 main section .lede-p li + li {
@@ -308,7 +308,7 @@ main section .btn {
   width: 250px;
   height: 40px;
   font-size: 18px;
-  background: url(/common/images/btn.jpg) no-repeat 0 0/250px 40px;
+  background: url(../images/btn.jpg) no-repeat 0 0/250px 40px;
   margin: 12px 44px 14px;
 }
 
